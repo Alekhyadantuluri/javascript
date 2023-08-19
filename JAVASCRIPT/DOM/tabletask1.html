@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task2 with table</title>
+</head>
+<body>
+	<table border="2">
+	<thead>
+		<tr>
+			<th> Course Name</th>
+			<th> Course Number</th>
+			<th> Course fees</th>
+			<th>Place</th>
+		</tr>
+	</thead>
+		<tbody id="tb">	
+		</tbody>
+	</table>
+	<script>
+		var obj=[{
+			'CourseName':'Html',
+			'CourseNumber':'123',
+			'Coursefees':'5000',
+			'Place':'srikakulam'
+		},
+		{
+			'CourseName':'Css',
+			'CourseNumber':'456',
+			'Coursefees':'2500',
+			'Place':'srikakulam'
+		},
+		{
+			'CourseName':'bootstrap',
+			'CourseNumber':'254',
+			'Coursefees':'2500',
+			'Place':'srikakulam'
+		},
+		{
+			'CourseName':'javascript',
+			'CourseNumber':'344',
+			'Coursefees':'5000',
+			'Place':'srikakulam'
+		}]
+		for (i=0;i<obj.length ;i++) {
+			let tr=document.createElement('tr');
+			let td1=document.createElement('td')
+			let td2=document.createElement('td')
+			let td3=document.createElement('td')
+			let td4=document.createElement('td')
+			td1.innerText=obj[i].CourseName
+			td2.innerText=obj[i].CourseNumber
+			td3.innerText=obj[i].Coursefees
+			td4.innerText=obj[i].Place
+			tr.append(td1)
+			tr.append(td2)
+			tr.append(td3)
+			tr.append(td4)
+			document.getElementById('tb').append(tr)
+		}
+	</script>
+</body>
+</html>
